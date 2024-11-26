@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     $usuario = $_POST ['usuario'];
     $senha = md5($_POST['senha']);
 
-    $sql = "SELECT * FROM usuario = '$usuario' AND senha = '$senha'";
+    $sql = "SELECT * FROM usuarios WHERE usuario = '$usuario' AND senha = '$senha'";
     $result = $conn->query($sql);
 
     if($result-> num_rows > 0){
